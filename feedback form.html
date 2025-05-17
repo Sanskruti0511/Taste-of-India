@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Furniture Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#ffffcc;
+            margin:10;
+            padding:10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .feedback-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .feedback-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .feedback-form input,
+        .feedback-form textarea,
+        .feedback-form select,
+        .feedback-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .feedback-form button {
+            background-color:#cc3300;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.querySelector('.success-message').style.display = 'block';
+            document.querySelector('.feedback-form').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <form class="feedback-form" onsubmit="handleSubmit(event)">
+        <h2> Feedback Form</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label for="feedback-type">Do you like Indian food :</label>
+        <select id="feedback-type" name="feedback_type" required>
+            <option>Yes</option>
+            <option>No</option>
+            
+        </select>
+
+        <label for="sugession">Sugessions:</label>
+        <textarea  name="sugession" rows="5" placeholder="Give your feedback" required></textarea>
+
+       <a href="thank page 1.html" class="button">
+
+        <button type="submit" href="thank page 1.html">Submit</button>
+        </a>
+    </form>
+
+</body>
+</html>
